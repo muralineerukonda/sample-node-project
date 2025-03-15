@@ -11,8 +11,6 @@ jobs:
               uses: actions/checkout@v4
             - name: file path
               run: ls -ltr
-            - name: change the directory
-              run: cd sample-node-project
             - name: install the application
               run: npm install
             - name: start the application
