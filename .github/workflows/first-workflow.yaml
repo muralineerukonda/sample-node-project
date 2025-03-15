@@ -1,0 +1,17 @@
+name: build-project
+on:
+    push:
+        branches:
+            - main
+jobs:
+    build-an-app:
+        runs-on: ubuntu-latest
+        steps:
+            - name: get the project code
+              uses: actions/checkout@v4
+            - name: change the directory
+              run: cd sample-node-project
+            - name: install the application
+              run: npm install
+            - name: start the application
+              run: npm start
